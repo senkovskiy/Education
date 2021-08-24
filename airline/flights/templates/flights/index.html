@@ -1,0 +1,45 @@
+{% extends 'flights/layout.html' %}
+
+{% block body %}
+<h1 id="fligts_header">Flights</h1>
+<button data-color="red">Red</button>
+<button data-color="blue">Blue</button>
+<button data-color="green">Green</button>
+
+<select>
+    <option value="black">Black</option>
+    <option value="green">Green</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+</select>
+
+<ul>
+    {% for flight in flights %}
+    <li>
+        <a href="{% url 'flight' flight.id %}">
+            Flight {{flight.id}}: {{flight.origin}} to {{flight.destination}}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('button').forEach(function (button) {
+            button.onclick = function () {
+                newFunction(button);
+            }
+        });
+
+        document.querySelector('select').onchange = function () {
+            document.querySelector('#fligts_header').style.color = this.value;
+        };
+
+    });
+
+    function newFunction(button) {
+        document.querySelector('#fligts_header').style.color = button.dataset.color;
+    }
+
+</script>
+{% endblock %}
