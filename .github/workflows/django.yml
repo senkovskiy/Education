@@ -3,7 +3,8 @@ name: Django CI
 on:
   push:
     branches: [ main ]
-    paths: -'airline/**'
+    paths: 
+      - airline/**
   pull_request:
     branches: [ main ]
 
