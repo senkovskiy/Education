@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\airline",
+    "\\airline\\__pycache__",
     "\\flights",
     "\\flights\\templates",
-    "\\flights\\templates\\flights",
+    "\\selenium",
     "\\users\\templates",
     "\\users\\templates\\users"
   ],
-  "SelectedNode": "\\flights\\urls.py",
+  "SelectedNode": "\\flights\\tests.py",
   "PreviewInSolutionExplorer": false
 }
