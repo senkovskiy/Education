@@ -1,0 +1,3 @@
+[submodule "introtodeeplearning"]
+	path = introtodeeplearning
+	url = https://github.com/senkovskiy/Education.git
